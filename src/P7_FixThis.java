@@ -15,17 +15,22 @@
 public class P7_FixThis {
 
 	public static void main(String[] args) {
-		for( int line = 0; line < 10; line++ ) {
-			int starsToWrite = line % 5 + 1 ;
-			writeChar( '*', starsToWrite );
-			System.out.println();
-		}
+		numberPrinter(5);
+		numberPrinterOdd(5);
+	}
 
-	}
-	
-	public static void writeChar( char characterToPrint, int numOfTimesToPrint  ) {
-		for( int numOfTimesPrinted = 1; numOfTimesPrinted <= numOfTimesToPrint; numOfTimesPrinted++ ) {
-			System.out.print( characterToPrint );
+	private static void numberPrinter(int max) {
+		for (int i = 1; i <= max; i++) {
+			System.out.print("[" + i + "] ");
 		}
+		System.out.println();
+		System.out.println();
+	}	
+	private static void numberPrinterOdd(int max) {
+		for (int i = 1; i <= max; i=i+2) {
+			System.out.print("[" + i + "] ");
+		}
+		System.out.println();
 	}
+
 }
